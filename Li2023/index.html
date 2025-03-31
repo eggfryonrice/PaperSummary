@@ -1,0 +1,603 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Belkin2019/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+    
+    
+      
+        <title>Trustworthy AI: From Principles to Practices - Paper Summary</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#trustworthy-ai-from-principles-to-practices" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Paper Summary" class="md-header__button md-logo" aria-label="Paper Summary" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Paper Summary
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Trustworthy AI: From Principles to Practices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Paper Summary" class="md-nav__button md-logo" aria-label="Paper Summary" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Paper Summary
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📚 Paper Summaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Belkin2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reconciling modern machine learning practice and the bias-variance trade-oﬀ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Trustworthy AI: From Principles to Practices
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trustworthy AI: From Principles to Practices
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspects-beyond-predictive-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aspects beyond predictive accuracy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspects beyond predictive accuracy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robustness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robustness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explainability-and-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explainability and Transparency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fairness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fairness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privacy-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy protection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systematic-approach-for-trustworthy-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systematic approach for trustworthy AI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspects-beyond-predictive-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aspects beyond predictive accuracy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspects beyond predictive accuracy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robustness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robustness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explainability-and-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explainability and Transparency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fairness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fairness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privacy-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy protection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systematic-approach-for-trustworthy-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systematic approach for trustworthy AI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="trustworthy-ai-from-principles-to-practices">Trustworthy AI: From Principles to Practices<a class="headerlink" href="#trustworthy-ai-from-principles-to-practices" title="Permanent link">&para;</a></h1>
+<p>I am reading this survey to overview what kind of research is going on on field of trustworthy AI. </p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>AI practitioners traditionally considered system performance to be the main metric in their workflows. But other kinds of aspect should also be considered to improve trustworthiness, such as robustness, algorithmic fairness, explainability, and transparency. Those aspects should be consider throughout the while lifecycle of an AI system, and those aspect may interfere with each other. </p>
+<h2 id="aspects-beyond-predictive-accuracy">Aspects beyond predictive accuracy<a class="headerlink" href="#aspects-beyond-predictive-accuracy" title="Permanent link">&para;</a></h2>
+<h3 id="robustness">Robustness<a class="headerlink" href="#robustness" title="Permanent link">&para;</a></h3>
+<p>AI can be vulnerable at the level of data, algorithms, and systems, respectively. 
+If AI model is trained without considering the diverse distributions of data in different secenarios, its performance will  e significantly affected. The robustness against distributional shift has been a common problem. For example, in the field of autonomous driving, industry are working hard to enhance the performance of vehicles in nightime or rainy scenes to guarantee the system's reliability. </p>
+<p>Adversarial attack and defenses against it have raised concerns in both academia and the industry in recent years. Some study cateraorized adversarial attack with respect to the attack timing. Decision time attack perturbs the input samples, training time attack injects carefully desinged samples into training data. There are other type of attacks such as feature space attacks, problem space attacks, and model stealing.</p>
+<p>System level robustness against illegal inputs should alsobe considered. For example, lidar perceptron system for autonomous vehicle might perceive laser beams emitted by lidars in other vehicles.</p>
+<p>Proper test is needed to evaluate and enhance to robustness of AI. Threre are functional test and performance test. From the attackers's perspective, the rate of success of an attack intuitively measures the robustness of the system.</p>
+<p>We may also consider certified verification of the adversarial robustness of an AI model. For example, we may derive lower bound of the inimum distortion to an attack on an AI model.</p>
+<h3 id="generalization">Generalization<a class="headerlink" href="#generalization" title="Permanent link">&para;</a></h3>
+<p>Genearalization is she capability to make accurate predictions regarding unseen data. Generalization has an impact on AI trustworthiness. AI should make predictions on realistic data, even on domains or distributions which they are not trained, so generalization affects the reliability and risk of practical systems. Also, AI models should be able to generlaize without exhaustively collect and annotate large amounts of data for various domains, so deployment of AI system can be more affordable and sustainable.</p>
+<p>Generalization is closely related to robustness. An algorithm that is robust agains small perturbations has better generalization, but robustness agains different data distributions may hurt the model's generalization.</p>
+<p>To evaluate genearlization, past ML studies have developed rich approaches to measure the bounds of models' generalization error, such as Rademacher complexity and Vapnik-Chervonenkis dimension. Deep Neural Network (DNN) has property that it obtains generalization despite their massive capcity, that has been examined by the perspective of bias-variance tradeoff.</p>
+<h3 id="explainability-and-transparency">Explainability and Transparency<a class="headerlink" href="#explainability-and-transparency" title="Permanent link">&para;</a></h3>
+<p>There is a demand for AI service users for the right to know the intention, business model, and technological mechanism of AI products.</p>
+<p>Explainability is understanding how an AI model makes its decision. From the perspective of scientific research, we need understanding about how data, parameters, precedures, and outcomes of AI. From persepective of building AI models, we need explainability to better use AI. </p>
+<p>Some studies tries to design explainable model. There are series of fully or partially explainable ML models. However, some complex models like DNN have exhibited better performance, it can't be explained by their design. Researcheres does post hoc explanation, that addresses model's behavior by analyzing its input, intermediate result, and output. </p>
+<p>Since there is ambiguity of the psychological outlining of explainability, unified evaluation of explainability has been recognized as a challenge. There are some approaches such as subjective human evaluation and human-Ai task performacne.  Despite these evaluations, directy quantitative measurement of explainability remains a problem. </p>
+<p>Transparency considers Ai as a software system, and seeks to disclose information regarding it sentire lifecycle. Transparency serves as basic requirement to build public's trust in Ai systems.</p>
+<p>To make AI system transparent, variety of information regarding to its creation should be sisclosed. The recent trend of open source systems significantly contributes to the algorithmic transparency. Transparency of the runtime process and decision making should also be considered in various scenarios. Qualitative evaluation of transparency has undergone recent advances in the AI industry. </p>
+<h3 id="reproducibility">Reproducibility<a class="headerlink" href="#reproducibility" title="Permanent link">&para;</a></h3>
+<p>Reproducibility enables effective verificaiton of research, and allos the community to quickly convert the lastest approaches into practice or conduct follow-up research. </p>
+<h3 id="fairness">Fairness<a class="headerlink" href="#fairness" title="Permanent link">&para;</a></h3>
+<p>It is important for practitioners to keep that the fairness of AI systems in mind to avoid instilling or exacerbating social bias.</p>
+<p>Common objective of fairness is to mitigate the effects of biases. Bias often manifest in the form of unfair treatment of different groups of people based on their protected inforation. </p>
+<p>Fairness can be applicable at multiple granularities of system behavior. At each granularity, we concern fairness of outcome and fairness of process. In tasks like face identification, we concern the aggregated behavior and the bias among different groups. In task like resume reviewing for candidate screening, wheresensitive variable can be easility decoupled from the other features that determine the system's prediction, we consider bias among individuals.</p>
+<p>In the group evel, there can be different types of fairness. Independence requires system to be statistically independent of sensetive variables. Seperation requires that independence principle hold conditioned on the unerlying ground truth. Sufficiency true outcome and sensitive variable to be independent. These principles are mutually exclusive under certain circumstances.</p>
+<p>Metrices of fairness can differ according to the properties of model and tasks. This can depend on 
+- whether task output, sensitive variables, model prediction are discrete or continuous
+- whether there is enough empirical data
+- number of sensitive variables we have </p>
+<h3 id="privacy-protection">Privacy protection<a class="headerlink" href="#privacy-protection" title="Permanent link">&para;</a></h3>
+<p>Privacy protection refers to protecting against unauthorized use of the data that can directly or indirectly identify a person or household. There are techniques to protect the privacy in data collection and processing, model training, and model deployment. There are various mathematical methods to formally verify the protectiveness of privacy-preserving approaches. </p>
+<h2 id="systematic-approach-for-trustworthy-ai">Systematic approach for trustworthy AI<a class="headerlink" href="#systematic-approach-for-trustworthy-ai" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
