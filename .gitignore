@@ -1,3 +1,16 @@
 .DS_Store
-
 /papers 
+Gemfile.lock
+_site
+.jekyll-cache
+.bundle/
+vendor/
+*.log
+*.tmp
+*.swp
+Thumbs.db
+ehthumbs.db
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.idea/
