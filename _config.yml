@@ -12,10 +12,10 @@ titles_from_headings:
 
 defaults:
   - scope:
-      path: "summaries"  
+      path: "posts"  
       type: "pages"
     values:
       layout: default 
 
 include:
-  - summaries
+  - posts
