@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% include mathjax.html %}
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  <main class="container">
+    <p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>
+    {% if page.title %}
+      <h1>{{ page.title }}</h1>
+    {% endif %}
+    {{ content }}
+  </main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+title: Paper Summaries
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
+plugins:
+  - jekyll-titles-from-headings
+titles_from_headings:
+  strip_title: true
+  collections: true
