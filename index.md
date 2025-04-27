@@ -5,7 +5,7 @@ title: Paper Summaries
 
 # 📚 Paper Summaries
 
-
+- [Uncovering structural diversity in commuting networks: Global and local entropy.](posts/Marin2022)
 - [Unravelling the spatial directionality of urban mobility](posts/Zhao2024)
 - [Uncovering the spatial structure of mobility networks](posts/Louail2015)
 - [사회후생함수를 이용한 도시교통정책의 형평성 분석](posts/HyunjooChoi2017)
