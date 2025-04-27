@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+
+  <title>Unravelling the spatial directionality ofurban mobility</title>
+</head>
+<body>
+  <main class="container">
+    <p><a href="/">← Back to Home</a></p>
+    
+      <h1>Unravelling the spatial directionality ofurban mobility</h1>
+    
+    <p>This paper introduce two-dimensional anisotropy-centripetality metric to unravel the spatial directionality of urban mobility.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Spatial directionality is the equilibrium characteristics and orientation tendencies of flows across various spatial directions towards or away from specific urban landmarks. Spatial directionality is indispensable for revealing complex urban mobility patterns. For example, for the problem whether city’s central business district should relocate to periphery, we need spatial directionality to detect changes, while traditional OD matrix analyses would fail.</p>
+
+<p>There were advancement in understanding urban mobility trhough non-spatial directionality, but reasearch considering spatial directionality was unexplored. This paper employs vector computation that integrates both the magnitude and the direction of mobility flows. Using concept of population mobility vector (PMV), they developed two metrics: anisotropy and centripetality, to quantify the spatial directional charactersitics of cities.</p>
+
+<h2 id="anisotropy-and-centripetality-of-mobility-flows">Anisotropy and centripetality of mobility flows</h2>
+<p>They vectorized the flow from origin to destintation $T_{ij}\vec{u_{ij}}$, where $T_{ij}$ is flow from origin $i$ to destination $j$, and $\vec{u_{ij}}$ is unit vector from $i$ to $j$ on a cartesian plane. They normalized the obtained vectors using the total outflow $O_i$ from each location, obtaining PMV:</p>
+
+\[\vec{T_i} = \sum_{j \neq i} \frac{T_{ij}}{O_i} \vec{u}_{ij}\]
+
+<p>They define</p>
+
+\[\lambda_i = \| \vec{T_i} \| = \left\| \sum_{j \neq i} \frac{T_{ij}}{O_i} \vec{u_{ij}} \right\|\]
+
+\[\theta_i = \arccos \left( \frac{ \vec{T_i} \cdot \vec{u_{iC}} }{ \left\| \vec{T_i} \right\| \left\| \vec{u_{iC}} \right\| } \right), \gamma_i = 1 - \frac{\theta_i}{\pi}\]
+
+<p>Then $\lambda_i \in [0,1]$, and the value is higher when all flows are oriented in the same direction. $\theta_i$ is relative angle of $\vec{T_i}$ to city centre $C$. $\theta_i \in [0,\pi]$, and the value is smaller when $\vec{T_i}$ is oriented toward the city centre. Hence, $\gamma_i \in [0,1]$ and value is higher when $\vec{T_i}$ is oriented toward the city centre.</p>
+
+<p>anisotropy ($\Lambda$) and centripetality ($\Gamma$) are metrices obtained from magnitude and direction of PMV relative to the city centre.</p>
+
+\[\Lambda = \frac{\sum_i O_i\lambda_i}{\sum_i O_i}, \Gamma = \frac{\sum_i O_i\gamma_i}{\sum_i O_i}\]
+
+<p>Higher anisotropy indicates unequal distribution of flows across various directions, with traffic concentrating in certian specific directions. Higher centripetality indicates flows predominantly move towards city centre.  Thus, high anisotropy and centripetality implies monocentric mobility pattern, wehre lower value indicates polycentric mobility pattern.</p>
+
+  </main>
+</body>
+</html>
