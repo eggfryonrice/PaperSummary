@@ -10,7 +10,7 @@ In this paper, entropy is measured on uncertanty of origin and destination. They
 
 ## Global diversity 
 
-### Spatial distributiono flabour supply and demand
+### Spatial distribution of labour supply and demand
 
 Labour supply and demand are not evely distributed in the geographic space, giving rise to complex patterns of spatial interactions. Entropy measure can explore whether flows in the city tend to be concentraed in dominant areas (monocentric pattern), or evenly dispersed from many origins to many destintaions (polycentric patterns). 
 

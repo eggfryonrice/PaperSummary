@@ -76,4 +76,4 @@ By above methodology, they found out that
 - Individuals living in residential hot spot who work ine employment main hub ($I$ flows) tavel shorter distances than the others.
 - As city size increases, largest impact is on convergent flows ($C$), individuals living in smaller residential areas and commuting to important employment centres.
 - Classification of cities based on ICDR values leads to gropus with consistent population size.
-- Comparison with null model suggests taht mobility gets more specific and be far from random organization as city grows.
+- Comparison with null model suggests that mobility gets more specific and be far from random organization as city grows.
