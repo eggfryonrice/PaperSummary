@@ -5,6 +5,9 @@ title: Paper Summaries
 
 # 📚 Paper Summaries
 
+
+
+- [Pattern Recognition and Machine Learning - Graphical Models](posts/Bishop2006-Ch8)
 - [Uncovering structural diversity in commuting networks: Global and local entropy.](posts/Marin2022)
 - [Unravelling the spatial directionality of urban mobility](posts/Zhao2024)
 - [Uncovering the spatial structure of mobility networks](posts/Louail2015)
